@@ -32,7 +32,21 @@
 
 }
 .expand{
-    width: 100%;
+    width: 50%;
+    text-align: center;
+}
+.label {
+    border-radius: 3px;
+    padding: 0.2rem;
+    color: white;
+}
+.label-completed{
+    background-color: green;
+
+}
+
+.label-not-completed{
+    background-color: red;
 }
 
 .action{

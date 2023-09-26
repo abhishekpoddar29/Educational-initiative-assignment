@@ -5,14 +5,15 @@ const Form = ({ closeForm, onsubmit, defaultValue }) => {
 
     const [formState, setFormState] = useState(defaultValue ||
         {
-        movie: '',
-        releaseyear: '',
+        task: '',
+        duedate: '',
+        stauts:'',
     });
 
     const [errors,setErrors] = useState("")
 
     const validateForm = () =>{
-        if (formState.movie && formState.releaseyear){
+        if (formState.task && formState.duedate && formState.status){
             setErrors("")
             return true
         }
@@ -53,12 +54,19 @@ const Form = ({ closeForm, onsubmit, defaultValue }) => {
             <div className='form'>
                 <form>
                     <div className='form-group'>
-                        <label htmlFor='movie'>Movie Title</label>
-                        <textarea name='movie' value={formState.movie} onChange={handleChange} />
+                        <label htmlFor='task'>task </label>
+                        <textarea name='task' value={formState.task} onChange={handleChange} />
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='release'>Release Year </label>
-                        <input type='text' name='releaseyear' value={formState.releaseyear} onChange={handleChange} />
+                        <label htmlFor='duedate'>Due Date </label>
+                        <input type='text' name='duedate' value={formState.duedate} onChange={handleChange} />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='status'>Status </label>
+                        <select  name='status' value={formState.status} onChange={handleChange}>
+                            <option value="completed">Completed</option>
+                            <option value="not-completed">Not-Completed</option>
+                        </select>
                     </div>
                     {errors && <div className='error'>{`Please include: ${errors}`}</div>}
                     <button type='submit' className='btn' onClick={handleSubmit}>Submit</button>

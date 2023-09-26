@@ -4,17 +4,17 @@ import Form from './components/Form';
 import Table from './components/Table';
 
 function App() {
-  const [formOpen,setFormOpen] = useState(false)
+  const [formOpen, setFormOpen] = useState(false)
 
   const [rows, setRows] = useState([
-    {movie:"SpiderMan"  , releaseyear:"2020"},
-    {movie:"Extraction"  , releaseyear:"2021"},
-    {movie:"Aladin"  , releaseyear:"2018"},
+    { task: "Complete Assignment", duedate: "25-09-23" ,status:"completed"},
+    { task: "DO Homework", duedate: "24-09-23" ,status:"completed"},
+    { task: "Football-session", duedate: "30-09-23",status:"completed" },
   ]);
-  const [rowToEdit,setRowToEdit] = useState(null);
+  const [rowToEdit, setRowToEdit] = useState(null);
 
   const handleDeleteRow = (targetIndex) => {
-    setRows(rows.filter((_,idx) => idx!== targetIndex))
+    setRows(rows.filter((_, idx) => idx !== targetIndex))
   };
 
   const handleEditRow = (idx) => {
@@ -25,23 +25,23 @@ function App() {
 
   const handleSubmit = (newRow) => {
     rowToEdit === null ?
-    setRows([...rows,newRow]):
-    setRows(rows.map((currRow,idx) => {
-      if(idx !==rowToEdit) return currRow;
-      return newRow;
-    }))
+      setRows([...rows, newRow]) :
+      setRows(rows.map((currRow, idx) => {
+        if (idx !== rowToEdit) return currRow;
+        return newRow;
+      }))
   };
 
   return (
     <div className="App">
       <div className='head'>
         <h1>
-          Movie List Application
+          TO-DO-LIST(Educational-Initiative-assignment)
         </h1>
       </div>
-      <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow}/>
-      <button className='btn' onClick={() => setFormOpen(true)}>Add Movies</button>
-      {formOpen && <Form closeForm={() => {setFormOpen(false); setRowToEdit(null); }} onsubmit={handleSubmit} defaultValue={rowToEdit !== null && rows[rowToEdit]} />}
+      <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow} />
+      <button className='btn' onClick={() => setFormOpen(true)}>Add Task</button>
+      {formOpen && <Form closeForm={() => { setFormOpen(false); setRowToEdit(null); }} onsubmit={handleSubmit} defaultValue={rowToEdit !== null && rows[rowToEdit]} />}
     </div>
   );
 }
