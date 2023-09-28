@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #npm run built the application . 
 Follow the given steps.
 Step-1: (Avoid this step if you have cloned your repository from GitHub)
@@ -51,6 +52,8 @@ npm install react-icons --save
 
 =======
 >>>>>>> 5f1e557ee22be5ea52bf047f28045d0eadec53ed
+=======
+>>>>>>> dcde30f43f37d66ed9c6ccabe786666e25a50465
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
