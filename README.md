@@ -21,6 +21,10 @@ npm install gh-pages --save-dev
 
 Step 3:-
 Add homepage property to package.json file.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f1e557ee22be5ea52bf047f28045d0eadec53ed
 Open your package.json file and add the below homepage.
 
 "homepage": "http://{abhishekpoddar29}.github.io/{https://github.com/abhishekpoddar29/Educational-initiative-assignment}"
@@ -41,9 +45,12 @@ yarn add react-icons
 npm install react-icons --save
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 5f1e557ee22be5ea52bf047f28045d0eadec53ed
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
