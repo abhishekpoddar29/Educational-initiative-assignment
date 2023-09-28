@@ -1,3 +1,49 @@
+#npm run built the application . 
+Follow the given steps.
+Step-1: (Avoid this step if you have cloned your repository from GitHub)
+
+Create the React application: npx create-react-app app-name
+Navigate to the project application: cd app-name
+Initialize your application: git init
+Add it as remote: git remote add origin your_github_repository_url.git
+
+Step-2:
+
+Clone your repository: git clone your_github_repository_url
+Navigate to project application: cd app-name
+Install dependencies: npm install
+Start your application to check: npm start
+Install a packagegh-pagesas a dev-dependency of the application
+
+cd app-name
+npm install gh-pages --save-dev
+
+
+Step 3:-
+Add homepage property to package.json file.
+Open your package.json file and add the below homepage.
+
+"homepage": "http://{abhishekpoddar29}.github.io/{https://github.com/abhishekpoddar29/Educational-initiative-assignment}"
+
+
+Step-4:
+
+In the existing scripts property, add the property predeploy and deploy
+
+"scripts": {
+//...
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+}
+#Install react-icon:-
+yarn add react-icons
+ or
+npm install react-icons --save
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
